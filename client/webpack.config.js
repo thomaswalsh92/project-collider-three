@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index.tsx",
+  entry: "./src/main.js",
   mode: "development",
   module: {
     rules: [
@@ -28,14 +28,14 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "our project",
-      template: "src/custom.html",
+      template: "src/index.html",
     }),
   ],
 
   devServer: {
     static: path.join(__dirname, "dist"),
     compress: true,
-    port: 4000,
+    port: 3000,
     open: true,
   },
 };
